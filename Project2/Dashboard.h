@@ -34,6 +34,8 @@ namespace Project2 {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Label^ label1;
+	protected:
 
 	protected:
 
@@ -52,20 +54,36 @@ namespace Project2 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(53, 167);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(40, 16);
+			this->label1->TabIndex = 0;
+			this->label1->Text = L"menu";
+			this->label1->Click += gcnew System::EventHandler(this, &Dashboard::label1_Click);
 			// 
 			// Dashboard
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(584, 512);
+			this->ClientSize = System::Drawing::Size(519, 410);
+			this->Controls->Add(this->label1);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"Dashboard";
 			this->Text = L"Dashboard";
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
 	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	};
 }
