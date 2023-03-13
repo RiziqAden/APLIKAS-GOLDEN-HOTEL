@@ -76,6 +76,7 @@ namespace Project2 {
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"Dashboard";
 			this->Text = L"Dashboard";
+			this->Load += gcnew System::EventHandler(this, &Dashboard::Dashboard_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -84,6 +85,8 @@ namespace Project2 {
 	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void Dashboard_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	};
 }
