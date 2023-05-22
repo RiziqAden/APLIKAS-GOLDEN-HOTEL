@@ -313,7 +313,7 @@ private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^
 		if (textBox1->Text == "Kelompok6")
 		{
 			if (textBox2->Text == "12345678") {
-				MessageBox::Show("sig in berhasil!");
+				MessageBox::Show("Sign in berhasil!");
 				this->Hide();
 				Dashboard^ Menu = gcnew Dashboard();
 				Menu->ShowDialog();
